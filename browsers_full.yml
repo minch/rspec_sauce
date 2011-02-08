@@ -1,0 +1,22 @@
+:browsers: 
+- :os: Windows 2003
+  :name: googlechrome
+  :version: "" # Leaving this blank ensures the latest
+- :os: Windows 2003
+  :name: firefox
+  :version: "3.6"
+- :os: Linux
+  :name: firefox
+  :version: "3.6"
+- :os: Windows 2003
+  :name: iehta
+  :version: "7."
+- :os: Windows 2003
+  :name: iehta
+  :version: "8."
+- :os: Windows 2003
+  :name: safari
+  :version: "4."
+- :os: Windows 2003
+  :name: safariproxy
+  :version: "5."

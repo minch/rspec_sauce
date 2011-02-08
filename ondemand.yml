@@ -1,2 +1,3 @@
-:username: your-sauce-labs-username
-:api_key:  your-sauce-labs-access-key
+:username: <%= ENV['SL_USERNAME'] %>
+:api_key:  <%= ENV['SL_API_KEY'] %>
+:url: 'http://staging.trazzler.com'
