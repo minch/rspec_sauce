@@ -14,6 +14,9 @@
 - :os: Windows 2003
   :name: iehta
   :version: "8."
+# Note:  SL currently only supports Safari 5 in proxy mode (could cause issues w/xhr).
+# They are going to let us know when full Safari 5 support is available, was not able to get
+# a hard date from their support.
 - :os: Windows 2003
   :name: safariproxy
   :version: "5."
