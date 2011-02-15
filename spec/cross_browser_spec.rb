@@ -95,6 +95,7 @@ browsers[:browsers].each do |browser|
 
           page.open url
           page.wait_for_page_to_load
+          handle_giveaway_popup
           page.is_element_present(finder).should be_true
         end
 
@@ -110,6 +111,7 @@ browsers[:browsers].each do |browser|
 
           page.open url
           page.wait_for_page_to_load
+          handle_giveaway_popup
           page.is_element_present(finder).should be_true
         end
 
@@ -125,6 +127,7 @@ browsers[:browsers].each do |browser|
 
           page.open url
           page.wait_for_page_to_load
+          handle_giveaway_popup
           page.click "link=Sign In"
           page.wait_for_condition condition 
         end
@@ -141,6 +144,7 @@ browsers[:browsers].each do |browser|
 
           page.open url
           page.wait_for_page_to_load
+          handle_giveaway_popup
           page.is_element_present(finder).should be_true
         end
       end
