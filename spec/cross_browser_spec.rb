@@ -72,14 +72,13 @@ browsers[:browsers].each do |browser|
           it "it should handle click Next button" do
             id = "trip_next_control"
             page.open "/trips/fisherman-s-wharf-in-san-francisco-ca-1"
-            page.wait_for_page_to_load # "30000"
+            #page.wait_for_page_to_load # "30000"
             handle_giveaway_popup
             page.is_element_present("id=#{id}").should be_true
             page.click id
-            page.wait_for_page_to_load # "30000"
+            handle_giveaway_popup
+            #page.wait_for_page_to_load # "30000"
             page.is_element_present("id=#{id}").should be_true
-
-            @done = true # Seems weak but let our context setter know we are finished
           end
 
         end
@@ -94,7 +93,7 @@ browsers[:browsers].each do |browser|
           url = "/destinations/new-smyrna-beach-fl"
 
           page.open url
-          page.wait_for_page_to_load
+          #page.wait_for_page_to_load
           handle_giveaway_popup
           page.is_element_present(finder).should be_true
         end
@@ -110,7 +109,7 @@ browsers[:browsers].each do |browser|
           url = "/tags/culinary"
 
           page.open url
-          page.wait_for_page_to_load
+          #page.wait_for_page_to_load
           handle_giveaway_popup
           page.is_element_present(finder).should be_true
         end
@@ -126,7 +125,7 @@ browsers[:browsers].each do |browser|
           condition = "selenium.browserbot.getCurrentWindow().document.getElementById('loginscreen-tab-list')"
 
           page.open url
-          page.wait_for_page_to_load
+          #page.wait_for_page_to_load
           handle_giveaway_popup
           page.click "link=Sign In"
           page.wait_for_condition condition 
