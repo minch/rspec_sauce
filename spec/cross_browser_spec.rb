@@ -143,8 +143,8 @@ browsers[:browsers].each do |browser|
           url = "/inns/the-foley-house-inn-in-savannah-ga"
 
           page.open url
-          page.wait_for_page_to_load
-          handle_giveaway_popup
+          #page.wait_for_page_to_load
+          handle_giveaway_popup # pois#show doesn't fire the popup
           page.is_element_present(finder).should be_true
         end
       end
@@ -166,16 +166,20 @@ browsers[:browsers].each do |browser|
     "x-close-giveaway-popup"
   end
 
+  # TODO:  remove debugging prints once we're sure this works
   def check_for_element(locator)
     retries = 3
     sleep_time = 1
-    script = "var document = selenium.browserbot.getCurrentWindow().document;"
+    script = "var document = this.browserbot.getCurrentWindow().document;"
     script += "var element = document.getElementById('#{popup_element_id}');"
-    script += "typeof(element);"
+    script += "element;"
+    p script
 
     retries.times do
-      eval_d = page.get_eval(script)
-      is_present = eval_d == 'object'
+      eval_d = page.get_eval(script) rescue nil
+      puts "eval_d = #{eval_d.inspect}"
+      is_present = eval_d != 'null'
+      puts "is_present = #{is_present.inspect}"
       return true if is_present
 
       sleep sleep_time
