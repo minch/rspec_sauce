@@ -11,6 +11,6 @@
 # - :os: Windows 2003
 #   :name: iehta
 #   :version: "8."
-- :os: Windows 2003
-  :name: safariproxy
-  :version: "5."
+# - :os: Windows 2003
+#   :name: safariproxy
+#   :version: "5."
