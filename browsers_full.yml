@@ -5,9 +5,9 @@
 # - :os: Windows 2003
 #   :name: firefox
 #   :version: "3.6"
-- :os: Windows 2003
-  :name: iehta
-  :version: "7."
+# - :os: Windows 2003
+#   :name: iehta
+#   :version: "7."
 - :os: Windows 2003
   :name: iehta
   :version: "8."
