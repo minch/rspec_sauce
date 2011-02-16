@@ -139,7 +139,7 @@ browsers[:browsers].each do |browser|
       context "Show" do
         it "it should render the show view" do
           finder = "class=photo_container"
-          url = "/inns/the-foley-house-inn-in-savannah-ga"
+          url = "/hotels/the-standard-miami-in-miami-beach-fl"
 
           page.open url
           #page.wait_for_page_to_load
