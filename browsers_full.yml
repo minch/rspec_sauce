@@ -1,10 +1,10 @@
-:browsers: 
-- :os: Windows 2003
-  :name: googlechrome
-  :version: ""
-- :os: Windows 2003
-  :name: firefox
-  :version: "3.6"
+# :browsers: 
+# - :os: Windows 2003
+#   :name: googlechrome
+#   :version: ""
+# - :os: Windows 2003
+#   :name: firefox
+#   :version: "3.6"
 - :os: Windows 2003
   :name: iehta
   :version: "7."
