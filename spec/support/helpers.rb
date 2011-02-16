@@ -33,7 +33,7 @@ def default_timeout_seconds
 end
 
 def default_timeout_milliseconds
-  50000
+  60000
 end
 
 def check_credentials(h)
