@@ -1,16 +1,16 @@
 :browsers: 
-# - :os: Windows 2003
-#   :name: googlechrome
-#   :version: ""
-# - :os: Windows 2003
-#   :name: firefox
-#   :version: "3.6"
-# - :os: Windows 2003
-#   :name: iehta
-#   :version: "7."
+- :os: Windows 2003
+  :name: googlechrome
+  :version: ""
+- :os: Windows 2003
+  :name: firefox
+  :version: "3.6"
 - :os: Windows 2003
   :name: iehta
-  :version: "8."
+  :version: "7."
 # - :os: Windows 2003
-#   :name: safariproxy
-#   :version: "5."
+#   :name: iehta
+#   :version: "8."
+- :os: Windows 2003
+  :name: safariproxy
+  :version: "5."
