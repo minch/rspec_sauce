@@ -60,7 +60,6 @@ browsers[:browsers].each do |browser|
       if @done || !@status
         context = get_context browser
         @selenium_driver.set_context context
-        puts "sent context: #{context.inspect}"
       end
       @selenium_driver.close_current_browser_session
     end
@@ -138,7 +137,7 @@ browsers[:browsers].each do |browser|
 
       context "Show" do
         it "it should render the show view" do
-          finder = "class=photo_container"
+          finder = "class=photo_container with_previews"
           url = "/hotels/the-standard-miami-in-miami-beach-fl"
 
           page.open url
@@ -172,13 +171,10 @@ browsers[:browsers].each do |browser|
     script = "var document = this.browserbot.getCurrentWindow().document;"
     script += "var element = document.getElementById('#{popup_element_id}');"
     script += "element;"
-    p script
 
     retries.times do
       eval_d = page.get_eval(script) rescue nil
-      puts "eval_d = #{eval_d.inspect}"
       is_present = eval_d != 'null'
-      puts "is_present = #{is_present.inspect}"
       return true if is_present
 
       sleep sleep_time
