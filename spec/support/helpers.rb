@@ -2,6 +2,8 @@ def test_name(name)
   name = name.first
   name = File.basename(name)
   name.sub(/\.rb$/, '')
+
+  @current_test_name ? [ name, @current_test_name ].join('-') : name
 end
 
 def get_context(browser)

@@ -69,6 +69,8 @@ browsers[:browsers].each do |browser|
 
         context "Controls" do
           it "it should handle click Next button" do
+            @current_test_name = "trip_pages_show_controls"
+
             id = "trip_next_control"
             page.open "/trips/fisherman-s-wharf-in-san-francisco-ca-1"
             #page.wait_for_page_to_load # "30000"
@@ -88,6 +90,8 @@ browsers[:browsers].each do |browser|
       context "Show" do
 
         it "it should render the show view" do
+          @current_test_name = "destinations_show"
+
           finder = "class=viewport"
           url = "/destinations/new-smyrna-beach-fl"
 
@@ -104,6 +108,8 @@ browsers[:browsers].each do |browser|
       context "Show" do
 
         it "it should render the show view" do
+          @current_test_name = "tags_show"
+
           finder = "class=viewport"
           url = "/tags/culinary"
 
@@ -120,6 +126,8 @@ browsers[:browsers].each do |browser|
 
       context "Signup and Signin" do
         it "it should render lightbox" do
+          @current_test_name = "account_signup_and_signin"
+
           url = "/tags/culinary?foo=sign_in_up"
           condition = "selenium.browserbot.getCurrentWindow().document.getElementById('loginscreen-tab-list')"
 
@@ -137,8 +145,10 @@ browsers[:browsers].each do |browser|
 
       context "Show" do
         it "it should render the show view" do
-          finder = "class=photo_container with_previews"
-          url = "/hotels/the-standard-miami-in-miami-beach-fl"
+          @current_test_name = "pois_show"
+
+          finder = "class=photo_container"
+          url = "/inns/castle-hill-inn-and-resort-in-newport-ri"
 
           page.open url
           #page.wait_for_page_to_load
